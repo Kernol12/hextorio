@@ -6,7 +6,7 @@ if lib.data.is_hextreme_enabled() then
         type = "quality",
         name = "hextreme",
         color = {128, 32, 16},
-        icon = "__hextorio__/graphics/icons/hextreme.png",
+        icon = "__privat_hextorio__/graphics/icons/hextreme.png",
         level = 8,
         mining_drill_resource_drain_multiplier = 0.08333333333333333333333,
         science_pack_drain_multiplier = 0.90,

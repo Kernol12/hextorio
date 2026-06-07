@@ -14,6 +14,6 @@ if data.raw["ambient-sound"]["main-menu"] == nil then
 else
     local title_screen_music = lib.startup_setting_value "title-screen-music"
     if title_screen_music ~= "vanilla" then
-        data.raw["ambient-sound"]["main-menu"].sound = "__hextorio__/sound/" .. title_screen_music .. ".ogg"
+        data.raw["ambient-sound"]["main-menu"].sound = "__privat_hextorio__/sound/" .. title_screen_music .. ".ogg"
     end
 end

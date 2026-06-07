@@ -74,7 +74,7 @@ data:extend({
         setting_type = "startup",
         default_value = 26,
         minimum_value = 8,
-        maximum_value = 60,
+        maximum_value = 256,
         order="h[hex-grid]-d[terrain]-s[hex-size]-p[nauvis]",
     },
     {
@@ -100,7 +100,7 @@ data:extend({
         setting_type = "startup",
         default_value = 40,
         minimum_value = 8,
-        maximum_value = 60,
+        maximum_value = 256,
         order="h[hex-grid]-d[terrain]-s[hex-size]-p[vulcanus]",
     },
     {
@@ -126,7 +126,7 @@ data:extend({
         setting_type = "startup",
         default_value = 35,
         minimum_value = 8,
-        maximum_value = 60,
+        maximum_value = 256,
         order="h[hex-grid]-d[terrain]-s[hex-size]-q[fulgora]",
     },
     {
@@ -152,7 +152,7 @@ data:extend({
         setting_type = "startup",
         default_value = 34,
         minimum_value = 8,
-        maximum_value = 60,
+        maximum_value = 256,
         order="h[hex-grid]-d[terrain]-s[hex-size]-q[gleba]",
     },
     {
@@ -178,7 +178,7 @@ data:extend({
         setting_type = "startup",
         default_value = 50,
         minimum_value = 8,
-        maximum_value = 60,
+        maximum_value = 256,
         order="h[hex-grid]-d[terrain]-s[hex-size]-r[aquilo]",
     },
     {
@@ -362,7 +362,6 @@ data:extend({
         setting_type = "runtime-global",
         default_value = 5000,
         minimum_value = 1000,
-        maximum_value = 10000,
         order = "v[world-gen]-p[nauvis]-h[total-hexes]",
     },
     {
@@ -379,7 +378,6 @@ data:extend({
         setting_type = "runtime-global",
         default_value = 2800,
         minimum_value = 100,
-        maximum_value = 10000,
         order = "v[world-gen]-p[vulcanus]-h[total-hexes]",
     },
     {
@@ -396,7 +394,6 @@ data:extend({
         setting_type = "runtime-global",
         default_value = 3200,
         minimum_value = 100,
-        maximum_value = 10000,
         order = "v[world-gen]-q[fulgora]-h[total-hexes]",
     },
     {
@@ -413,7 +410,6 @@ data:extend({
         setting_type = "runtime-global",
         default_value = 1800,
         minimum_value = 100,
-        maximum_value = 10000,
         order = "v[world-gen]-q[gleba]-h[total-hexes]",
     },
     {
@@ -430,7 +426,6 @@ data:extend({
         setting_type = "runtime-global",
         default_value = 600,
         minimum_value = 100,
-        maximum_value = 10000,
         order = "v[world-gen]-r[aquilo]-h[total-hexes]",
     },
     {

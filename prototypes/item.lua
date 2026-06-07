@@ -2,7 +2,7 @@
 -- COINS
 local hex_coin = table.deepcopy(data.raw["item"]["coin"])
 hex_coin.name = "hex-coin"
-hex_coin.icon = "__hextorio__/graphics/icons/hex-coin.png"
+hex_coin.icon = "__privat_hextorio__/graphics/icons/hex-coin.png"
 hex_coin.order = "y[coins]-a[hex]"
 hex_coin.stack_size = 999
 hex_coin.auto_recycle = false
@@ -12,7 +12,7 @@ hex_coin.weight = 10000
 
 local gravity_coin = table.deepcopy(hex_coin)
 gravity_coin.name = "gravity-coin"
-gravity_coin.icon = "__hextorio__/graphics/icons/gravity-coin.png"
+gravity_coin.icon = "__privat_hextorio__/graphics/icons/gravity-coin.png"
 gravity_coin.order = "y[coins]-b[gravity]"
 gravity_coin.auto_recycle = false
 gravity_coin.subgroup = "other"
@@ -21,7 +21,7 @@ gravity_coin.weight = 10000
 
 local meteor_coin = table.deepcopy(hex_coin)
 meteor_coin.name = "meteor-coin"
-meteor_coin.icon = "__hextorio__/graphics/icons/meteor-coin.png"
+meteor_coin.icon = "__privat_hextorio__/graphics/icons/meteor-coin.png"
 meteor_coin.order = "y[coins]-b[meteor]"
 meteor_coin.auto_recycle = false
 meteor_coin.subgroup = "other"
@@ -30,7 +30,7 @@ meteor_coin.weight = 10000
 
 local hexaprism_coin = table.deepcopy(hex_coin)
 hexaprism_coin.name = "hexaprism-coin"
-hexaprism_coin.icon = "__hextorio__/graphics/icons/hexaprism-coin.png"
+hexaprism_coin.icon = "__privat_hextorio__/graphics/icons/hexaprism-coin.png"
 hexaprism_coin.order = "y[coins]-c[hexaprism]"
 hexaprism_coin.auto_recycle = false
 hexaprism_coin.subgroup = "other"
@@ -39,7 +39,7 @@ hexaprism_coin.weight = 10000
 
 local black_hole_coin = table.deepcopy(hex_coin)
 black_hole_coin.name = "black-hole-coin"
-black_hole_coin.icon = "__hextorio__/graphics/icons/black-hole-coin.png"
+black_hole_coin.icon = "__privat_hextorio__/graphics/icons/black-hole-coin.png"
 black_hole_coin.order = "y[coins]-d[black-hole]"
 black_hole_coin.stack_size = 1000
 black_hole_coin.auto_recycle = false
@@ -53,7 +53,7 @@ local hexic_transport_belt = table.deepcopy(data.raw["item"]["transport-belt"])
 hexic_transport_belt.name = "hexic-transport-belt"
 hexic_transport_belt.default_import_location = "aquilo"
 hexic_transport_belt.color_hint.text = "5"
-hexic_transport_belt.icon = "__hextorio__/graphics/icons/hexic-transport-belt.png"
+hexic_transport_belt.icon = "__privat_hextorio__/graphics/icons/hexic-transport-belt.png"
 hexic_transport_belt.order = "a[transport-belt]-e[hexic-transport-belt]"
 hexic_transport_belt.place_result = "hexic-transport-belt"
 hexic_transport_belt.weight = 20000
@@ -62,7 +62,7 @@ local hexic_underground_belt = table.deepcopy(data.raw["item"]["underground-belt
 hexic_underground_belt.name = "hexic-underground-belt"
 hexic_underground_belt.default_import_location = "aquilo"
 hexic_underground_belt.color_hint.text = "5"
-hexic_underground_belt.icon = "__hextorio__/graphics/icons/hexic-underground-belt.png"
+hexic_underground_belt.icon = "__privat_hextorio__/graphics/icons/hexic-underground-belt.png"
 hexic_underground_belt.order = "b[underground-belt]-e[hexic-underground-belt]"
 hexic_underground_belt.place_result = "hexic-underground-belt"
 hexic_underground_belt.weight = 40000
@@ -71,7 +71,7 @@ local hexic_splitter = table.deepcopy(data.raw["item"]["splitter"])
 hexic_splitter.name = "hexic-splitter"
 hexic_splitter.default_import_location = "aquilo"
 hexic_splitter.color_hint.text = "5"
-hexic_splitter.icon = "__hextorio__/graphics/icons/hexic-splitter.png"
+hexic_splitter.icon = "__privat_hextorio__/graphics/icons/hexic-splitter.png"
 hexic_splitter.order = "c[splitter]-e[hexic-splitter]"
 hexic_splitter.place_result = "hexic-splitter"
 hexic_splitter.weight = 20000
@@ -89,8 +89,8 @@ local modules = {}
 for _, module_type in pairs {{"a", "speed"}, {"c", "productivity"}, {"c", "efficiency"}, {"d", "quality"}} do
     local m = table.deepcopy(data.raw["module"][module_type[2] .. "-module-3"])
     m.name = "hexa-" .. module_type[2] .. "-module"
-    m.icon = "__hextorio__/graphics/icons/" .. m.name .. ".png"
-    -- m.icon = "__hextorio__/graphics/icons/hexa-" .. module_type[2] .. "-module.png"
+    m.icon = "__privat_hextorio__/graphics/icons/" .. m.name .. ".png"
+    -- m.icon = "__privat_hextorio__/graphics/icons/hexa-" .. module_type[2] .. "-module.png"
     m.order = module_type[1] .. "[" .. module_type[2] .. "]-c[" .. module_type[2] .. "-module-4]"
     m.tier = 4
     m.effect = module_effects[module_type[2]]
@@ -130,7 +130,7 @@ demolisher_capsule.localised_description = nil
 -- Items
 local hexaprism = table.deepcopy(data.raw["item"]["calcite"])
 hexaprism.name = "hexaprism"
-hexaprism.icon = "__hextorio__/graphics/icons/hexaprism.png"
+hexaprism.icon = "__privat_hextorio__/graphics/icons/hexaprism.png"
 hexaprism.pictures = nil
 hexaprism.order = "h[hexaprism]"
 hexaprism.subgroup = "raw-resource"
@@ -140,8 +140,8 @@ hexaprism.weight = 100000
 
 local crystalline_fuel = table.deepcopy(data.raw["item"]["nuclear-fuel"])
 crystalline_fuel.name = "crystalline-fuel"
-crystalline_fuel.icon = "__hextorio__/graphics/icons/crystalline-fuel.png"
-crystalline_fuel.pictures.layers[1].filename = "__hextorio__/graphics/icons/crystalline-fuel.png"
+crystalline_fuel.icon = "__privat_hextorio__/graphics/icons/crystalline-fuel.png"
+crystalline_fuel.pictures.layers[1].filename = "__privat_hextorio__/graphics/icons/crystalline-fuel.png"
 crystalline_fuel.order = "r[uranium-processing]-f[crystalline-fuel]"
 crystalline_fuel.default_import_location = "nauvis"
 crystalline_fuel.fuel_value = "6GJ"
@@ -151,7 +151,7 @@ crystalline_fuel.fuel_top_speed_multiplier = 1.5
 -- Dungeons
 local dungeon_chest = table.deepcopy(data.raw["item"]["steel-chest"])
 dungeon_chest.name = "dungeon-chest"
-dungeon_chest.icon = "__hextorio__/graphics/icons/dungeon-chest.png"
+dungeon_chest.icon = "__privat_hextorio__/graphics/icons/dungeon-chest.png"
 dungeon_chest.order = "a[items]-d[dungeon-chest]"
 dungeon_chest.place_result = "dungeon-chest"
 

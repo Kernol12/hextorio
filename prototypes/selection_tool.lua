@@ -4,7 +4,7 @@ local claim_tool = {
     name = "claim-tool",
     icons = {
         {
-            icon = "__hextorio__/graphics/icons/claim-tool-x64.png",
+            icon = "__privat_hextorio__/graphics/icons/claim-tool-x64.png",
             icon_size = 64,
         },
     },
@@ -32,7 +32,7 @@ local delete_core_tool = {
     name = "delete-core-tool",
     icons = {
         {
-            icon = "__hextorio__/graphics/icons/delete-core-tool-x64.png",
+            icon = "__privat_hextorio__/graphics/icons/delete-core-tool-x64.png",
             icon_size = 64,
         },
     },
@@ -55,7 +55,7 @@ local hexport_tool = {
     name = "hexport-tool",
     icons = {
         {
-            icon = "__hextorio__/graphics/icons/hexport-tool-x64.png",
+            icon = "__privat_hextorio__/graphics/icons/hexport-tool-x64.png",
             icon_size = 64,
         },
     },
@@ -78,7 +78,7 @@ local spider_network_tool = {
     name = "spider-network-tool",
     icons = {
         {
-            icon = "__hextorio__/graphics/icons/spider-network-tool-x64.png",
+            icon = "__privat_hextorio__/graphics/icons/spider-network-tool-x64.png",
             icon_size = 64,
         },
     },

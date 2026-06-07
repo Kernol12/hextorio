@@ -160,8 +160,8 @@ boost_resistances(dungeon_wall, {"electric"}, 1)
 
 local dungeon_chest = table.deepcopy(data.raw["container"]["steel-chest"])
 dungeon_chest.name = "dungeon-chest"
-dungeon_chest.icon = "__hextorio__/graphics/icons/dungeon-chest.png"
-dungeon_chest.picture.layers[1].filename = "__hextorio__/graphics/entity/dungeon-chest/dungeon-chest.png"
+dungeon_chest.icon = "__privat_hextorio__/graphics/icons/dungeon-chest.png"
+dungeon_chest.picture.layers[1].filename = "__privat_hextorio__/graphics/entity/dungeon-chest/dungeon-chest.png"
 dungeon_chest.max_health = 9001 -- Functionally pointless, but it makes it seem cooler.
 dungeon_chest.inventory_size = 1000
 dungeon_chest.minable.result = "dungeon-chest"

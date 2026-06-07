@@ -3,13 +3,13 @@ local plague_rocket = table.deepcopy(data.raw["ammo"]["rocket"])
 plague_rocket.name = "plague-rocket"
 plague_rocket.ammo_type.action.action_delivery.projectile = "plague-rocket"
 plague_rocket.order = "d[rocket-launcher]-d[plague]"
-plague_rocket.icon = "__hextorio__/graphics/icons/plague-rocket.png"
+plague_rocket.icon = "__privat_hextorio__/graphics/icons/plague-rocket.png"
 
 data.raw["ammo"]["capture-robot-rocket"].order = "d[rocket-launcher]-e[capture]"
 
 local magmatic_rounds_magazine = table.deepcopy(data.raw["ammo"]["piercing-rounds-magazine"])
 magmatic_rounds_magazine.name = "magmatic-rounds-magazine"
-magmatic_rounds_magazine.icon = "__hextorio__/graphics/icons/magmatic-rounds-magazine.png"
+magmatic_rounds_magazine.icon = "__privat_hextorio__/graphics/icons/magmatic-rounds-magazine.png"
 magmatic_rounds_magazine.order = "a[basic-clips]-d[magmatic-rounds-magazine]"
 local explosive_rocket = table.deepcopy(data.raw["projectile"]["explosive-rocket"])
 local explosive_aoe = explosive_rocket.action.action_delivery.target_effects[6]
@@ -35,7 +35,7 @@ electromagnetic_penetrator_cell.order = "e[railgun-ammo]-b[electromagnetic-penet
 electromagnetic_penetrator_cell.ammo_category = "electromagnetic-penetrator"
 electromagnetic_penetrator_cell.weight = 100000
 electromagnetic_penetrator_cell.stack_size = 1
-electromagnetic_penetrator_cell.icon = "__hextorio__/graphics/icons/electromagnetic-penetrator-cell.png"
+electromagnetic_penetrator_cell.icon = "__privat_hextorio__/graphics/icons/electromagnetic-penetrator-cell.png"
 electromagnetic_penetrator_cell.ammo_type.target_type = "entity"
 electromagnetic_penetrator_cell.ammo_type.action.range = 65
 electromagnetic_penetrator_cell.ammo_type.action.width = 2

@@ -14,15 +14,15 @@ emp_beam_bounce.action.action_delivery.target_effects = {
     },
 }
 
-emp_beam_bounce.graphics_set.beam.start.filename = "__hextorio__/graphics/beam/chain-beam-START.png"
-emp_beam_bounce.graphics_set.beam.ending.filename = "__hextorio__/graphics/beam/chain-beam-END.png"
-emp_beam_bounce.graphics_set.beam.head.layers[1].filename = "__hextorio__/graphics/beam/chain-body-0.png"
-emp_beam_bounce.graphics_set.beam.head.layers[2].filename = "__hextorio__/graphics/beam/chain-body-1.png"
-emp_beam_bounce.graphics_set.beam.tail.layers[1].filename = "__hextorio__/graphics/beam/chain-body-0.png"
-emp_beam_bounce.graphics_set.beam.tail.layers[2].filename = "__hextorio__/graphics/beam/chain-body-6.png"
+emp_beam_bounce.graphics_set.beam.start.filename = "__privat_hextorio__/graphics/beam/chain-beam-START.png"
+emp_beam_bounce.graphics_set.beam.ending.filename = "__privat_hextorio__/graphics/beam/chain-beam-END.png"
+emp_beam_bounce.graphics_set.beam.head.layers[1].filename = "__privat_hextorio__/graphics/beam/chain-body-0.png"
+emp_beam_bounce.graphics_set.beam.head.layers[2].filename = "__privat_hextorio__/graphics/beam/chain-body-1.png"
+emp_beam_bounce.graphics_set.beam.tail.layers[1].filename = "__privat_hextorio__/graphics/beam/chain-body-0.png"
+emp_beam_bounce.graphics_set.beam.tail.layers[2].filename = "__privat_hextorio__/graphics/beam/chain-body-6.png"
 for i = 1, 6 do
-    emp_beam_bounce.graphics_set.beam.body[i].layers[1].filename = "__hextorio__/graphics/beam/chain-body-0.png"
-    emp_beam_bounce.graphics_set.beam.body[i].layers[2].filename = "__hextorio__/graphics/beam/chain-body-" .. i .. ".png"
+    emp_beam_bounce.graphics_set.beam.body[i].layers[1].filename = "__privat_hextorio__/graphics/beam/chain-body-0.png"
+    emp_beam_bounce.graphics_set.beam.body[i].layers[2].filename = "__privat_hextorio__/graphics/beam/chain-body-" .. i .. ".png"
 end
 
 -- local emp_beam_start = table.deepcopy(data.raw["beam"]["chain-tesla-turret-beam-start"])

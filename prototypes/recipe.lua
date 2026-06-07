@@ -11,7 +11,7 @@ data.raw["recipe"]["roboport"].category = "electronics"
 -- Custom recipes
 local hexic_transport_belt = table.deepcopy(data.raw["recipe"]["turbo-transport-belt"])
 hexic_transport_belt.name = "hexic-transport-belt"
-hexic_transport_belt.icon = "__hextorio__/graphics/icons/hexic-transport-belt.png"
+hexic_transport_belt.icon = "__privat_hextorio__/graphics/icons/hexic-transport-belt.png"
 hexic_transport_belt.enabled = false
 hexic_transport_belt.ingredients = {
     {type = "item", name = "turbo-transport-belt", amount = 25},
@@ -29,7 +29,7 @@ hexic_transport_belt.energy_required = 15
 
 local hexic_underground_belt = table.deepcopy(data.raw["recipe"]["turbo-underground-belt"])
 hexic_underground_belt.name = "hexic-underground-belt"
-hexic_underground_belt.icon = "__hextorio__/graphics/icons/hexic-underground-belt.png"
+hexic_underground_belt.icon = "__privat_hextorio__/graphics/icons/hexic-underground-belt.png"
 hexic_underground_belt.enabled = false
 hexic_underground_belt.ingredients = {
     {type = "item", name = "turbo-underground-belt", amount = 8},
@@ -47,7 +47,7 @@ hexic_underground_belt.energy_required = 8
 
 local hexic_splitter = table.deepcopy(data.raw["recipe"]["turbo-splitter"]) --[[@as data.RecipePrototype]]
 hexic_splitter.name = "hexic-splitter"
-hexic_splitter.icon = "__hextorio__/graphics/icons/hexic-splitter.png"
+hexic_splitter.icon = "__privat_hextorio__/graphics/icons/hexic-splitter.png"
 hexic_splitter.enabled = false
 hexic_splitter.ingredients = {
     {type = "item", name = "turbo-splitter", amount = 1},
@@ -68,7 +68,7 @@ local module_recipes = {}
 for _, module_type in pairs {"speed", "productivity", "efficiency", "quality"} do
     local r = table.deepcopy(data.raw["recipe"][module_type .. "-module-3"])
     r.name = "hexa-" .. module_type .. "-module"
-    -- r.icon = "__hextorio__/graphics/icons/hexa-" .. module_type .. "-module.png"
+    -- r.icon = "__privat_hextorio__/graphics/icons/hexa-" .. module_type .. "-module.png"
     r.enabled = false
     r.category = "electromagnetics"
     local amount = {[module_type] = 3}
@@ -176,7 +176,7 @@ local energized_thruster_fuel = table.deepcopy(data.raw["recipe"]["advanced-thru
 energized_thruster_fuel.name = "energized-thruster-fuel"
 energized_thruster_fuel.enabled = false
 energized_thruster_fuel.category = "chemistry-or-cryogenics"
-energized_thruster_fuel.icon = "__hextorio__/graphics/icons/energized-thruster-fuel.png"
+energized_thruster_fuel.icon = "__privat_hextorio__/graphics/icons/energized-thruster-fuel.png"
 energized_thruster_fuel.ingredients = {
     {type = "item", name = "carbon", amount = 10},
     {type = "item", name = "calcite", amount = 5},
@@ -193,7 +193,7 @@ local energized_thruster_oxidizer = table.deepcopy(data.raw["recipe"]["advanced-
 energized_thruster_oxidizer.name = "energized-thruster-oxidizer"
 energized_thruster_oxidizer.enabled = false
 energized_thruster_oxidizer.category = "chemistry-or-cryogenics"
-energized_thruster_oxidizer.icon = "__hextorio__/graphics/icons/energized-thruster-oxidizer.png"
+energized_thruster_oxidizer.icon = "__privat_hextorio__/graphics/icons/energized-thruster-oxidizer.png"
 energized_thruster_oxidizer.ingredients = {
     {type = "item", name = "iron-ore", amount = 10},
     {type = "item", name = "calcite", amount = 5},
@@ -210,7 +210,7 @@ local crystalline_fuel = table.deepcopy(data.raw["recipe"]["nuclear-fuel"])
 crystalline_fuel.name = "crystalline-fuel"
 crystalline_fuel.enabled = false
 crystalline_fuel.category = "cryogenics"
-crystalline_fuel.icon = "__hextorio__/graphics/icons/crystalline-fuel.png"
+crystalline_fuel.icon = "__privat_hextorio__/graphics/icons/crystalline-fuel.png"
 crystalline_fuel.ingredients = {
     {type = "item", name = "nuclear-fuel", amount = 1},
     {type = "item", name = "hexaprism", amount = 2},
@@ -304,7 +304,7 @@ local electromagnetic_penetrator = {
         {type = "fluid", name = "fluoroketone-hot", amount = 200, temperature = 180},
     },
     main_product = "electromagnetic-penetrator",
-    icon = "__hextorio__/graphics/icons/electromagnetic-penetrator.png",
+    icon = "__privat_hextorio__/graphics/icons/electromagnetic-penetrator.png",
 }
 
 local electromagnetic_penetrator_cell = {
@@ -321,7 +321,7 @@ local electromagnetic_penetrator_cell = {
     results = {
         {type = "item", name = "electromagnetic-penetrator-cell", amount = 1},
     },
-    icon = "__hextorio__/graphics/icons/electromagnetic-penetrator-cell.png",
+    icon = "__privat_hextorio__/graphics/icons/electromagnetic-penetrator-cell.png",
 }
 
 
@@ -390,11 +390,11 @@ for i = 2, 6 do
         },
         icons = {
             {
-                icon = "__hextorio__/graphics/icons/hexadic-resonator-" .. i .. ".png",
+                icon = "__privat_hextorio__/graphics/icons/hexadic-resonator-" .. i .. ".png",
                 icon_size = 64,
             },
             {
-                icon = "__hextorio__/graphics/icons/cyclic-arrow.png",
+                icon = "__privat_hextorio__/graphics/icons/cyclic-arrow.png",
                 icon_size = 64,
             },
         },

@@ -6,9 +6,9 @@ local claim_tool = {
     item_to_spawn = "claim-tool",
     order = "z[hextorio]-c[claim-tool]",
     icon_size = 32,
-    icon = "__hextorio__/graphics/icons/claim-tool-x32.png",
+    icon = "__privat_hextorio__/graphics/icons/claim-tool-x32.png",
     small_icon_size = 24,
-    small_icon = "__hextorio__/graphics/icons/claim-tool-x24.png",
+    small_icon = "__privat_hextorio__/graphics/icons/claim-tool-x24.png",
 }
 
 local delete_core_tool = {
@@ -18,9 +18,9 @@ local delete_core_tool = {
     item_to_spawn = "delete-core-tool",
     order = "z[hextorio]-c[delete-core-tool]",
     icon_size = 32,
-    icon = "__hextorio__/graphics/icons/delete-core-tool-x32.png",
+    icon = "__privat_hextorio__/graphics/icons/delete-core-tool-x32.png",
     small_icon_size = 24,
-    small_icon = "__hextorio__/graphics/icons/delete-core-tool-x24.png",
+    small_icon = "__privat_hextorio__/graphics/icons/delete-core-tool-x24.png",
 }
 
 local hexport_tool = {
@@ -30,9 +30,9 @@ local hexport_tool = {
     item_to_spawn = "hexport-tool",
     order = "z[hextorio]-c[hexport-tool]",
     icon_size = 32,
-    icon = "__hextorio__/graphics/icons/hexport-tool-x32.png",
+    icon = "__privat_hextorio__/graphics/icons/hexport-tool-x32.png",
     small_icon_size = 24,
-    small_icon = "__hextorio__/graphics/icons/hexport-tool-x24.png",
+    small_icon = "__privat_hextorio__/graphics/icons/hexport-tool-x24.png",
 }
 
 local spider_network_tool = {
@@ -42,9 +42,9 @@ local spider_network_tool = {
     item_to_spawn = "spider-network-tool",
     order = "z[hextorio]-c[spider-network-tool]",
     icon_size = 32,
-    icon = "__hextorio__/graphics/icons/spider-network-tool-x32.png",
+    icon = "__privat_hextorio__/graphics/icons/spider-network-tool-x32.png",
     small_icon_size = 24,
-    small_icon = "__hextorio__/graphics/icons/spider-network-tool-x24.png",
+    small_icon = "__privat_hextorio__/graphics/icons/spider-network-tool-x24.png",
 }
 
 

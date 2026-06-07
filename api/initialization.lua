@@ -151,8 +151,7 @@ function initialization.init()
     end
 
     -- JOIN DISCORD PLEASE :D
-    game.forces.player.add_chart_tag("nauvis", {position = {0, 0}, text = "Join the Discord to ask questions, report bugs, share your ideas, or just hang out!"})
-    game.forces.player.add_chart_tag("nauvis", {position = {0, 4}, text = "https://discord.gg/huJY7QK6UG"})
+    game.forces.player.add_chart_tag("nauvis", {position = {0, 0}, text = "Home sweet home"})
 
     event_system.trigger "game-started"
     item_value_solver.init()

@@ -29,7 +29,7 @@ table.insert(transport_belt_capacity_3.effects, {
 
 local electromagnetic_penetrator = table.deepcopy(data.raw["technology"]["railgun"])
 electromagnetic_penetrator.name = "electromagnetic-penetrator"
-electromagnetic_penetrator.icon = "__hextorio__/graphics/technology/electromagnetic-penetrator.png"
+electromagnetic_penetrator.icon = "__privat_hextorio__/graphics/technology/electromagnetic-penetrator.png"
 electromagnetic_penetrator.prerequisites = {"railgun", "tesla-weapons", "promethium-science-pack"}
 electromagnetic_penetrator.unit = {
     count = 5000,
@@ -97,7 +97,7 @@ if lib.data.is_hextreme_enabled() then
         {
             type = "technology",
             name = "hextreme-quality",
-            icon = "__hextorio__/graphics/technology/hextreme-quality.png",
+            icon = "__privat_hextorio__/graphics/technology/hextreme-quality.png",
             icon_size = 256,
             prerequisites = {"promethium-science-pack", "legendary-quality"},
             unit = {
@@ -218,7 +218,7 @@ data:extend({
     {
         type = "technology",
         name = "hexic-logistics",
-        icon = "__hextorio__/graphics/technology/hexic-logistics.png",
+        icon = "__privat_hextorio__/graphics/technology/hexic-logistics.png",
         icon_size = 256,
         prerequisites = {"turbo-transport-belt", "cryogenic-science-pack"},
         unit = {
@@ -256,7 +256,7 @@ data:extend({
     {
         type = "technology",
         name = "hexa-modules",
-        icon = "__hextorio__/graphics/technology/hexa-modules.png",
+        icon = "__privat_hextorio__/graphics/technology/hexa-modules.png",
         icon_size = 128,
         prerequisites = {"promethium-science-pack", "productivity-module-3", "speed-module-3", "efficiency-module-3", "quality-module-3"},
         unit = {
@@ -299,7 +299,7 @@ data:extend({
     {
         type = "technology",
         name = "energized-thruster-fuel",
-        icon = "__hextorio__/graphics/technology/energized-thruster-fuel.png",
+        icon = "__privat_hextorio__/graphics/technology/energized-thruster-fuel.png",
         icon_size = 256,
         prerequisites = {"promethium-science-pack"},
         unit = {
@@ -364,7 +364,7 @@ data:extend({
     {
         type = "technology",
         name = "crystalline-fuel",
-        icon = "__hextorio__/graphics/technology/crystalline-fuel.png",
+        icon = "__privat_hextorio__/graphics/technology/crystalline-fuel.png",
         icon_size = 256,
         prerequisites = {"promethium-science-pack", "kovarex-enrichment-process"},
         unit = {
@@ -395,7 +395,7 @@ data:extend({
     {
         type = "technology",
         name = "magmatic-ammo",
-        icon = "__hextorio__/graphics/technology/magmatic-ammo.png",
+        icon = "__privat_hextorio__/graphics/technology/magmatic-ammo.png",
         icon_size = 256,
         prerequisites = {"military-4", "metallurgic-science-pack"},
         unit = {
@@ -430,7 +430,7 @@ data:extend({
     {
         type = "technology",
         name = "plague-rocket",
-        icon = "__hextorio__/graphics/technology/plague-rocket.png",
+        icon = "__privat_hextorio__/graphics/technology/plague-rocket.png",
         icon_size = 256,
         prerequisites = {"rocketry", "agricultural-science-pack"},
         unit = {
@@ -458,11 +458,11 @@ data:extend({
         name = "sovr-enrichment-process",
         icons = {
             {
-                icon = "__hextorio__/graphics/icons/hexadic-resonator-5.png",
+                icon = "__privat_hextorio__/graphics/icons/hexadic-resonator-5.png",
                 icon_size = 64,
             },
             {
-                icon = "__hextorio__/graphics/icons/cyclic-arrow.png",
+                icon = "__privat_hextorio__/graphics/icons/cyclic-arrow.png",
                 icon_size = 64,
             },
         },
