@@ -82,7 +82,7 @@ with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as archive
     for source in sorted(root.rglob("*")):
         relative = source.relative_to(root)
 
-        if any(part in excluded_dirs for part in relative.parts):
+        if any(part in excluded_dirs or part.startswith("_") for part in relative.parts):
             continue
         if source.is_dir() or source.resolve() == zip_path:
             continue
