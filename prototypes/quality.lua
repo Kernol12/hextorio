@@ -7,7 +7,7 @@ if lib.data.is_hextreme_enabled() then
         name = "hextreme",
         color = {128, 32, 16},
         icon = "__privat_hextorio__/graphics/icons/hextreme.png",
-        level = 30,
+        level = settings.startup["hextorio-hextreme-level"].value,
         mining_drill_resource_drain_multiplier = 0.08333333333333333333333,
         science_pack_drain_multiplier = 0.90,
         beacon_power_usage_multiplier = 1/9,
