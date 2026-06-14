@@ -7,20 +7,23 @@ if lib.data.is_hextreme_enabled() then
         name = "hextreme",
         color = {128, 32, 16},
         icon = "__privat_hextorio__/graphics/icons/hextreme.png",
-        level = 8,
+        level = 30,
         mining_drill_resource_drain_multiplier = 0.08333333333333333333333,
         science_pack_drain_multiplier = 0.90,
         beacon_power_usage_multiplier = 1/9,
         subgroup = "qualities",
-        order = "e0", -- right after legendary, even if other mods add more qualities
+        order = "z-hextreme",
     }
 
     -- Other mods might be adding more qualities.
-    -- Insert hextreme before the first one that other mods have added after legendary.
-    hextreme.next = data.raw.quality.legendary.next
+    -- Insert hextreme after the last quality in the current quality chain.
+    local last_quality = data.raw.quality.legendary
+    while last_quality.next and data.raw.quality[last_quality.next] do
+        last_quality = data.raw.quality[last_quality.next]
+    end
 
-    data.raw.quality.legendary.next = "hextreme"
-    data.raw.quality["legendary"].next_probability = 0.1
+    last_quality.next = "hextreme"
+    last_quality.next_probability = 0.1
 
     data:extend({hextreme})
 end
