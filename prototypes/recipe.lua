@@ -72,14 +72,25 @@ for _, module_type in pairs {"speed", "productivity", "efficiency", "quality"} d
     r.enabled = false
     r.category = "electromagnetics"
     local amount = {[module_type] = 3}
-    r.ingredients = {
-        {type = "item", name = "speed-module-3", amount = amount["speed"] or 1},
-        {type = "item", name = "productivity-module-3", amount = amount["productivity"] or 1},
-        {type = "item", name = "efficiency-module-3", amount = amount["efficiency"] or 1},
-        {type = "item", name = "quality-module-3", amount = amount["quality"] or 1},
-        {type = "item", name = "hexaprism", amount = 1},
-        {type = "fluid", name = "fluoroketone-cold", amount = 200},
-    }
+    if mods["moar-modules"] then
+        r.ingredients = {
+            {type = "item", name = "mm-speed-module-6", amount = amount["speed"] or 1},
+            {type = "item", name = "mm-productivity-module-6", amount = amount["productivity"] or 1},
+            {type = "item", name = "mm-effectivity-module-6", amount = amount["efficiency"] or 1},
+            {type = "item", name = "mm-quality-module-6", amount = amount["quality"] or 1},
+            {type = "item", name = "hexaprism", amount = 1},
+            {type = "fluid", name = "fluoroketone-cold", amount = 200},
+        }
+    else
+        r.ingredients = {
+            {type = "item", name = "speed-module-3", amount = amount["speed"] or 1},
+            {type = "item", name = "productivity-module-3", amount = amount["productivity"] or 1},
+            {type = "item", name = "efficiency-module-3", amount = amount["efficiency"] or 1},
+            {type = "item", name = "quality-module-3", amount = amount["quality"] or 1},
+            {type = "item", name = "hexaprism", amount = 1},
+            {type = "fluid", name = "fluoroketone-cold", amount = 200},
+        }
+    end
     local product_name = "hexa-" .. module_type .. "-module"
     r.results = {
         {type = "item", name = product_name, amount = 1},

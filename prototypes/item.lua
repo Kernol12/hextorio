@@ -78,16 +78,22 @@ hexic_splitter.weight = 20000
 
 
 -- MODULES
-local module_effects = {
-    speed = {consumption = 1.8, quality = -0.5, speed = 1.7},
-    --speed = {consumption = 1.0, quality = -0.35, speed = 1.0},
-    productivity = {consumption = 1.2, pollution = 0.30, productivity = 0.25, speed = -0.50},
-    --productivity = {consumption = 1.2, pollution = 0.15, productivity = 0.16, speed = -0.25},
-    efficiency = {consumption = -0.90, speed = 0.65},
-    --efficiency = {consumption = -0.80},
-    quality = {quality = 0.75, speed = -0.10},
-    --quality = {quality = 0.40, speed = -0.08},
-}
+local module_effects = {}
+if mods["moar-modules"] then
+    module_effects = {
+        speed = {consumption = 1.8, quality = -0.5, speed = 1.7},
+        productivity = {consumption = 1.2, pollution = 0.30, productivity = 0.25, speed = -0.50},
+        efficiency = {consumption = -0.90, speed = 0.65},
+        quality = {quality = 0.75, speed = -0.10},
+    }
+else
+    module_effects = {
+        speed = {consumption = 1.0, quality = -0.35, speed = 1.0},
+        productivity = {consumption = 1.2, pollution = 0.15, productivity = 0.16, speed = -0.25},
+        efficiency = {consumption = -0.80},
+        quality = {quality = 0.40, speed = -0.08},
+    }
+end
 
 local modules = {}
 for _, module_type in pairs {{"a", "speed"}, {"c", "productivity"}, {"c", "efficiency"}, {"d", "quality"}} do
@@ -96,7 +102,7 @@ for _, module_type in pairs {{"a", "speed"}, {"c", "productivity"}, {"c", "effic
     m.icon = "__privat_hextorio__/graphics/icons/" .. m.name .. ".png"
     -- m.icon = "__privat_hextorio__/graphics/icons/hexa-" .. module_type[2] .. "-module.png"
     m.order = "zz" .. module_type[1] .. "[" .. module_type[2] .. "]-c[" .. module_type[2] .. "-module-4]"
-    m.tier = 4
+    m.tier = 7
     m.effect = module_effects[module_type[2]]
     table.insert(modules, m)
 end
