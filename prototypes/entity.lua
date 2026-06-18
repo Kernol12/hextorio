@@ -342,8 +342,15 @@ hidden_loader.selection_priority = 51 -- Not so hidden anymore.
 
 -- BELTS
 local hexic_transport_belt = table.deepcopy(data.raw["transport-belt"]["turbo-transport-belt"])
+local speed_source_belt
+if mods["ev-logistics"] then
+    speed_source_belt = data.raw["transport-belt"]["hyper-transport-belt"].speed
+    hexic_transport_belt.speed = speed_source_belt * 1.6
+else
+    speed_source_belt = data.raw["transport-belt"]["turbo-transport-belt"].speed
+    hexic_transport_belt.speed = speed_source_belt * 1.5
+end
 hexic_transport_belt.name = "hexic-transport-belt"
-hexic_transport_belt.speed = hexic_transport_belt.speed * 1.5
 hexic_transport_belt.belt_animation_set.animation_set.filename = "__privat_hextorio__/graphics/entity/hexic-transport-belt/hexic-transport-belt.png"
 hexic_transport_belt.belt_animation_set.frozen_patch.filename = "__privat_hextorio__/graphics/entity/hexic-transport-belt/hexic-transport-belt-frozen.png"
 hexic_transport_belt.corpse = "turbo-transport-belt-remnants" -- TODO
@@ -351,7 +358,11 @@ hexic_transport_belt.minable.result = "hexic-transport-belt"
 hexic_transport_belt.max_health = 200
 hexic_transport_belt.icon = "__privat_hextorio__/graphics/icons/hexic-transport-belt.png"
 hexic_transport_belt.related_underground_belt = "hexic-underground-belt"
-data.raw["transport-belt"]["turbo-transport-belt"].next_upgrade = "hexic-transport-belt"
+if mods["ev-logistics"] then
+    data.raw["transport-belt"]["hyper-transport-belt"].next_upgrade = "hexic-transport-belt"
+else
+    data.raw["transport-belt"]["turbo-transport-belt"].next_upgrade = "hexic-transport-belt"
+end
 
 local hexic_underground_belt = table.deepcopy(data.raw["underground-belt"]["turbo-underground-belt"])
 hexic_underground_belt.name = "hexic-underground-belt"
@@ -378,7 +389,11 @@ game.surfaces[1].create_entities_from_blueprint_string {
     position = {0, 0}
 }
 ]]
-data.raw["underground-belt"]["turbo-underground-belt"].next_upgrade = "hexic-underground-belt"
+if mods["ev-logistics"] then
+    data.raw["underground-belt"]["hyper-underground-belt"].next_upgrade = "hexic-underground-belt"
+else
+    data.raw["underground-belt"]["turbo-underground-belt"].next_upgrade = "hexic-underground-belt"
+end
 
 local hexic_splitter = table.deepcopy(data.raw["splitter"]["turbo-splitter"])
 hexic_splitter.name = "hexic-splitter"
@@ -397,7 +412,11 @@ hexic_splitter.structure.west.filename = "__privat_hextorio__/graphics/entity/he
 hexic_splitter.structure_patch.east.filename = "__privat_hextorio__/graphics/entity/hexic-splitter/hexic-splitter-east-top_patch.png"
 hexic_splitter.structure_patch.west.filename = "__privat_hextorio__/graphics/entity/hexic-splitter/hexic-splitter-west-top_patch.png"
 hexic_splitter.localised_description = data.raw["splitter"]["splitter"].localised_description
-data.raw["splitter"]["turbo-splitter"].next_upgrade = "hexic-splitter"
+if mods["ev-logistics"] then
+    data.raw["splitter"]["hyper-splitter"].next_upgrade = "hexic-splitter"
+else
+    data.raw["splitter"]["turbo-splitter"].next_upgrade = "hexic-splitter"
+end
 
 
 local sentient_spider = table.deepcopy(data.raw["spider-vehicle"]["spidertron"])

@@ -9,12 +9,25 @@ data.raw["recipe"]["construction-robot"].category = "electronics"
 data.raw["recipe"]["roboport"].category = "electronics"
 
 -- Custom recipes
+local ingredient_belt
+local ingredient_underground_belt
+local ingredient_splitter
+if mods["ev-logistics"] then
+    ingredient_belt = "hyper-transport-belt"
+    ingredient_underground_belt = "hyper-underground-belt"
+    ingredient_splitter = "hyper-splitter"
+else
+    ingredient_belt = "turbo-transport-belt"
+    ingredient_underground_belt = "turbo-underground-belt"
+    ingredient_splitter = "turbo-splitter"
+end
+
 local hexic_transport_belt = table.deepcopy(data.raw["recipe"]["turbo-transport-belt"])
 hexic_transport_belt.name = "hexic-transport-belt"
 hexic_transport_belt.icon = "__privat_hextorio__/graphics/icons/hexic-transport-belt.png"
 hexic_transport_belt.enabled = false
 hexic_transport_belt.ingredients = {
-    {type = "item", name = "turbo-transport-belt", amount = 25},
+    {type = "item", name = ingredient_belt, amount = 25},
     {type = "item", name = "lithium-plate", amount = 5},
     {type = "item", name = "tungsten-plate", amount = 100},
     {type = "item", name = "holmium-plate", amount = 40},
@@ -32,7 +45,7 @@ hexic_underground_belt.name = "hexic-underground-belt"
 hexic_underground_belt.icon = "__privat_hextorio__/graphics/icons/hexic-underground-belt.png"
 hexic_underground_belt.enabled = false
 hexic_underground_belt.ingredients = {
-    {type = "item", name = "turbo-underground-belt", amount = 8},
+    {type = "item", name = ingredient_underground_belt, amount = 8},
     {type = "item", name = "lithium-plate", amount = 10},
     {type = "item", name = "tungsten-plate", amount = 200},
     {type = "item", name = "holmium-plate", amount = 16},
@@ -50,7 +63,7 @@ hexic_splitter.name = "hexic-splitter"
 hexic_splitter.icon = "__privat_hextorio__/graphics/icons/hexic-splitter.png"
 hexic_splitter.enabled = false
 hexic_splitter.ingredients = {
-    {type = "item", name = "turbo-splitter", amount = 1},
+    {type = "item", name = ingredient_splitter, amount = 1},
     {type = "item", name = "tungsten-plate", amount = 20},
     {type = "item", name = "holmium-plate", amount = 4},
     {type = "item", name = "carbon-fiber", amount = 5},
