@@ -871,6 +871,7 @@ end
 -- regardless of type being fluid or item. And surfaces is the table of surface names where the recipe is able to be used.
 -- Product amounts are the average amount per batch if random (between some min and max and/or with some probability)
 -- Product amounts are also increased if the recipe can only be made in a +50% prod kind of building.
+---@param recipe LuaRecipePrototype
 function lib.normalize_recipe_structure(recipe)
     local r = {
         name = recipe.name,
@@ -881,15 +882,16 @@ function lib.normalize_recipe_structure(recipe)
     for _, ing in pairs(recipe.ingredients) do
         table.insert(r.ingredients, {name = ing.name, amount = ing.amount})
     end
-    local mult = 1
-    if recipe.category == "metallurgy" or recipe.category == "electromagnetics" or recipe.category == "organic" then
-        mult = 1.5
+    local prod_bonus = 0
+    for _, category in pairs(recipe.categories or {}) do
+        if category == "metallurgy" or category == "electromagnetics" or category == "organic" then
+            prod_bonus = 0.5
+            break
+        end
     end
-    for _, prod in pairs(recipe.products) do
-        local min = prod.amount_min or prod.amount
-        local max = prod.amount_max or prod.amount
-        local mean = (min + max) * 0.5 * prod.probability
-        table.insert(r.products, {name = prod.name, amount = mean * mult})
+    for i, prod in pairs(recipe.products) do
+        local mean = recipe.get_product_amount(i, prod_bonus)
+        table.insert(r.products, {name = prod.name, amount = mean})
     end
     return r
 end
@@ -898,7 +900,7 @@ end
 function lib.get_recipe_tree()
     local recipe_tree = {}
     for name, recipe in pairs(prototypes.recipe) do
-        if recipe.category ~= "recycling" then
+        if not recipe.has_category "recycling" then
             recipe_tree[name] = lib.normalize_recipe_structure(recipe)
         end
     end
@@ -2544,6 +2546,18 @@ function lib.get_planet_order_category(surface_name)
         return "q"
     else
         return "r"
+    end
+end
+
+---Get the damage trigger effect item from a list of trigger effect items.
+---@param target_effects TriggerEffectItem[]
+---@param damage_type string
+---@return data.DamageEntityTriggerEffectItem|nil
+function lib.get_damage_trigger_effect(target_effects, damage_type)
+    for _, target_effect in pairs(target_effects) do
+        if target_effect.type == "damage" and target_effect.damage.type == damage_type then
+            return target_effect ---@diagnostic disable-line
+        end
     end
 end
 
